@@ -7,6 +7,13 @@ var milk ,milkImage
 
 //create feed and lastFed variable here
 
+function feed(){
+
+}
+
+function lastFed(){
+  
+}
 
 function preload(){
 sadDog=loadImage("Dog.png");
@@ -35,6 +42,9 @@ function setup() {
   addFood.mousePressed(addFood);
 
 
+}
+
+
 
 function draw() {
   background(52,150,89);
@@ -53,14 +63,15 @@ function readStock(data){
 
 
 function feedDog(){
+  milk.visible = false;
   dog.addImage(happyDog);
   
 }
 
 //function to add food in stock
-function addFoods(){
+function addFood(){
   foodS++;
   database.ref('/').update({
     Food:foodS
   })
-} 
+}
